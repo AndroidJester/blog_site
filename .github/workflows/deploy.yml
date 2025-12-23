@@ -38,6 +38,10 @@ jobs:
               with:
                   hugo-version: "latest"
                   extended: true
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                   submodules: recursive
 
             - name: Build
               run: hugo build
